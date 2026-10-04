@@ -2,42 +2,183 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
-    <title>Landing</title>
+    <title>Landing @ Teague's Debian Box</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_io/site.webmanifest">
     <style>
-      a {
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        src: url('file/proxima-nova-regular-opentype-2_ufonts.com.woff2') format('woff2'),
+             url('file/proxima-nova-regular-opentype-2_ufonts.com.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --bg-color: #181a1b;
+        --blue-bg-color: #304a4e;
+        --blue-bg-color-2: #4c7579;
+        --dark-bg-color: #0a0b0b;
+        --text-color: #ffffff;
+        --link-color: #3391ff;
+        --content-header-boarder-color: rgb(60, 178, 214);
+      }
+
+      p {
+        color: var(--text-color);
+      }
+
+      #banner-img {
+        width: 100%;
+        aspect-ratio: 1400 / 350;
+        object-fit: cover;
+        display: block;
+        overflow: hidden;
+      }
+
+      html {
+        background-color: var(--dark-bg-color);
+        font-family: 'Proxima Nova', "Noto Sans";
+        font-size: 20px;
+      }
+
+      body {
+        max-width: 1000px;
+        margin-inline: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      header {
+        margin: 0;
+        vertical-align: bottom;
+      }
+
+      main {
+        background-color: var(--bg-color);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-top-style: inset;
+        border-bottom-style: outset;
+        border-width: 6px;
+        border-color: var(--content-header-boarder-color);
+      }
+
+      .content-block {
+        color: var(--text-color);
+        display: flex; 
+        flex-direction: column;
+      }
+
+      .content-block a {
         text-decoration: none;
+        color: var(--link-color);
+      }
+
+      .content-block h1 {
+        text-align: center;
+        margin-inline: auto;
+        border:rgb(from rgb(60, 178, 214) r g b);
+        border-style: outset;
+        border-radius: 15px;
+        max-width: fit-content;
+        border-width: 7px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .content-block p, nav {
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: large;
+      }
+
+      .content-block ul {
+        padding-right: 50px;
+        padding-left: 50px;
+        font-size: large;
+      }
+
+      #projects li + li {
+        margin-top: 10px;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1 style="text-align: center;">Welcome to the index of https://debian-box.caracal-draco.ts.net</h1>
+      <img id="banner-img" src="img/banner.jpg" alt="A blue mountain image banner">
     </header>
-    <body style="margin: 15px;">
-      <h2>Professional Reference</h2>
-      <ul>
-        <li><a href="coming.soon">My Resume</a> - Coming soon!</li>
-        <li><a href="coming.soon">A Letter of Reccomendation</a> from Professor Taylor at Carnegie Mellon University</li>
-        <li><a href="coming.soon">My Ohio State University Acceptance Letter</a></li>
-        <li><a href="coming.soon">My Personal Github</a></li>
-        <li><a href="">My LinkedIn</a></li>
-      </ul>
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="https://debian-box.caracal-draco.ts.net/sorting">Visual Sorting Algorithms</a> - An online demo of my sorting visualization project.</li>
-        <li style="list-style-type: none">
-          <ul>
-            <li><a download>.exe download</a> (For use with a LOVE2D installation)</li>
-            <li><a download>.love download</a> (For use with a LOVE2D installation)</li>
-            <li><a download>.html download</a> (for running locally in your browser)</li>
-          </ul>
-        </li>
-        <li>
-          <a href="https://docs.google.com/document/d/1YlbLwMbO6HxWiAs9xtckcCSOut4ei5R7-JeR9m8410w/edit?usp=sharing">The Saint Jimmy Formula Sheet</a> -
-          This was put together by me throughout college and is comprised of some basic math reference.
-        </li>
-      </ul>
+    <main>
+      <div class="content-block">
+        <h1>What is this Website?</h1>
+        <p>
+          Welcome to Teague Burkey's Debian box!
+          <br>
+          This is a portfolio made by and for me. It is self-hosted on physical hardware (an old desktop PC given to me by my grandparents) and served to the internet using
+          tailscale's funnel service out of my personal tailnet.
+        </p>
+      </div>
+      <div class="content-block">
+        <h1>Professional Reference</h1>
+        <nav style="margin-inline: auto;">
+          <a href="coming.soon">My Resume</a>  - Coming soon! |
+          <a href="https://www.linkedin.com/in/teague-burkey-a65066402/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2B0t2MF2KQMiuiEibKj9npA%3D%3D">My LinkedIn</a> | 
+          <a href="https://github.com/The0zymandias">My Personal Github</a>
+          
+        </nav>
+        <ul>
+          <li><a href="doc/mtaylor-rec-letter.pdf">A Letter of Reccomendation</a> from Professor Taylor at Carnegie Mellon University</li>
+          <li><a href="doc/pre-college-enrollment-letter.pdf">My Enrollment Letter</a> to Carnegie Mellon University's 2025 Pre-College Program.</li>
+          <li><a href="doc/osu-acceptance-letter.pdf">My Ohio State University Acceptance Letter</a></li>
+          <li><a href="doc/osu-scholars-acceptance-letter.pdf">OSU Engineering Scholars Acceptance Letter</a></li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h1>Projects</h1>
+        <p style="margin: 0px; text-align: center; margin-inline: auto;">
+          &lt; All projects  are concieved of and created WITHOUT the use of AI generated code &gt;<br>&lt; for the purpose of cultivating my own skillset and problem-solving skills &gt;
+        </p>
+        <ul id="projects">
+          <li>
+            <a href="https://docs.google.com/document/d/1YlbLwMbO6HxWiAs9xtckcCSOut4ei5R7-JeR9m8410w/edit?usp=sharing">The Saint Jimmy Formula Sheet</a> <b>(2026 - present)</b> -
+            This was put together by me throughout college and is designed to be a comprehensive reference of math formulas that are relevant in high school and college level mathmatics.
+          </li>
+          <li>
+            <a href="https://github.com/cscosu/bootcamp-honeymonkey/tree/master">OSU Cybersecurity Club Honeymonkey</a> <b>(2026)</b> - I wrote the skeleton for one of OSU Cyber Security Club's backend utilities.
+            It is written in Python 3.14 and makes use of various technologies, including the JSON specification, python pip, SHA-256 hashing, and the Selenium WebDriver (used for exploring and 
+            interacting with websites). This honeymonkey runs through the CTF (capture the flag) website to complete cyber security challenges, check hashes 
+            of files to make sure they aren't corrupted, and report when any of that fails.
+          </li>
+          <li>
+            <a href="https://github.com/The0zymandias/update-discord-script">Update Discord Script</a> <b>(2024)</b> - This is a 5-line bash script that updates discord to the lastest .deb version
+            on Debian-based linux distros. The distrobution of Discord for debian does not update itself for some reason and will refuse to launch if it is not the latest version, so I made this script so that I don't need to manually write out the shell commands.
+            You could modify your discord .desktop file to run this script before trying to launch discord, or just run the script on a sucessful login to the computer.
+          </li>
+          <li>
+            <a href="https://github.com/The0zymandias/Miitopia_Randomizer">Miitopia Randomizer</a> <b>(2023, revised 2025)</b> - This is my fork of the Miitopia randomizer project. 
+            It heavily utilizes Python 3 and required parsing .sarc files, rudamentary spreadsheet files, and a bit of reverse-engineering. Miitopia is a simple RPG game where you
+            fight enemies, recruit teammates, and defeat a big bad guy. My fork expands on the original randomizer's capabilities by randomizing Inn rooms, preventing some weird crashes on the 3DS
+            port of the game, rebalancing a few enemies, limiting music randomization, and cleaning up the pre-existing code.
+          </li>
+          <li><a href="https://github.com/The0zymandias/Visual-Sorting-Algorithms">Visual Sorting Algorithms</a> <b>(2023)</b> - 
+            A visually pleasing display of how various sorting algorithms function. Utilizes the LOVE2D game engine and Lua.</li>
+          <li style="list-style-type: none; margin-top: 0px;">
+            <ul>
+              <li style="margin: 0px;"><a href="sorting.html">online demo</a> (For any browser with Javascript enabled)</li>
+              <li style="margin: 0px;"><a download>.exe download</a> (for 64 & 32 bit x86 computers)</li>
+              <li style="margin: 0px;"><a href="file/visual-sorting-algorithms.love" download>.love download</a> (For use with a LOVE2D installation)</li>
+              <li style="margin: 0px;"><a href="sorting.html" download>.html download</a> (for running in your browser)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </main>
-    <footer></footer>
+    <footer><h1 style="text-align: center; margin: 0;">Teague W. Burkey @<br>https://debian-box.caracal-draco.ts.net</h1></footer>
   </body>
 </html>
