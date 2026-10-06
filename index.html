@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Landing @ Teague's Debian Box</title>
@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="img/favicon_io/site.webmanifest">
+    <link rel="preload" type="image" href="img/banner.jpg">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -29,16 +30,8 @@
         --content-header-boarder-color: rgb(60, 178, 214);
       }
 
-      p {
+      p, h1, h2, h3 {
         color: var(--text-color);
-      }
-
-      #banner-img {
-        width: 100%;
-        aspect-ratio: 1400 / 350;
-        object-fit: cover;
-        display: block;
-        overflow: hidden;
       }
 
       html {
@@ -83,17 +76,18 @@
       .content-block h1 {
         text-align: center;
         margin-inline: auto;
-        border:rgb(from rgb(60, 178, 214) r g b);
+        border: rgb(from rgb(60, 178, 214) r g b);
         border-style: outset;
         border-radius: 15px;
         max-width: fit-content;
         border-width: 7px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
       .content-block p, nav {
         text-align: center;
+        margin-top: 0px;
         padding-left: 40px;
         padding-right: 40px;
         font-size: large;
@@ -108,6 +102,33 @@
       #projects li + li {
         margin-top: 10px;
       }
+
+      #banner-img {
+        width: 100%;
+        aspect-ratio: 1400 / 350;
+        object-fit: cover;
+        display: block;
+        overflow: hidden;
+      }
+
+      #technologies-svg {
+        height: 48px;
+        max-width: 100%;
+        display: block;
+        margin-inline: auto;
+      }
+
+      #about-me {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      #profile-vertical {
+        max-width: 35%;
+        border: rgb(from rgb(60, 178, 214) r g b);
+      }
     </style>
   </head>
   <body>
@@ -115,15 +136,46 @@
       <img id="banner-img" src="img/banner.jpg" alt="A blue mountain image banner">
     </header>
     <main>
+      <div id="about-me">
+        <img id="profile-vertical", src="img/profile-vertical.jpg">
+        <div style="flex: 1; text-align: center;">
+          <h1 style="margin-top: 15px; margin-bottom: 10px;">Teague W. Burkey</h1>
+          <h3 style="margin-top: 0px;"> Engineering Scholars Student @ OSU</h3>
+          <hr>
+          <p style="text-align: left; padding-left: 10px; padding-right: 10px;">
+            Hello and welcome to my website!
+            <br>
+            I am a Computer Science Engineering student at OSU, involved with OSU Engineering Scholars and OSU's Cyber Security Club.
+            <br>
+            I have interests in reverse engineering software, digital privacy, software app development, digital networking, teaching, and more.
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <p>
+          <img id="technologies-svg" src="https://skillicons.dev/icons?i=bash,github,debian,eclipse,java,linux,lua,matlab,py,vscode,vscodium">
+          <img id="technologies-svg" src="https://skillicons.dev/icons?i=c,cmake,css,html,docker,kali,selenium,md,stackoverflow">
+        </p>
+      </div>
+      <hr>
+      <div class="content-block">
+        <h1>Who Am I?</h1>
+        <p>
+          I'm Teague Burkey, a Computer Science Engineering student at the Ohio State University. I'm involved with OSU's
+          Cybersecurity Club and am an active participant in OSU's Engineering Scholars program.
+        </p>
+      </div>
+      <hr>
       <div class="content-block">
         <h1>What is this Website?</h1>
         <p>
-          Welcome to Teague Burkey's Debian box!
-          <br>
-          This is a portfolio made by and for me. It is self-hosted on physical hardware (an old desktop PC given to me by my grandparents) and served to the internet using
-          tailscale's funnel service out of my personal tailnet.
+          This is a digital portfolio designed to give you an idea of my skillset and interests.
+          It is self-hosted on what was once a desktop PC, given to me by my grandparents and served to the internet using
+          tailscale's reverse-proxy service (tailscale funnel).
         </p>
       </div>
+      <hr>
       <div class="content-block">
         <h1>Professional Reference</h1>
         <nav style="margin-inline: auto;">
@@ -139,6 +191,7 @@
           <li><a href="doc/osu-scholars-acceptance-letter.pdf">OSU Engineering Scholars Acceptance Letter</a></li>
         </ul>
       </div>
+      <hr>
       <div class="content-block">
         <h1>Projects</h1>
         <p style="margin: 0px; text-align: center; margin-inline: auto;">
@@ -156,6 +209,18 @@
             of files to make sure they aren't corrupted, and report when any of that fails.
           </li>
           <li>
+            <a href="https://github.com/The0zymandias/miitopia-3ds-background-mii-replacements">3DS Miitopia Background Mii Replacements</a> <b>(2025)</b> - An old game that I enjoy playing had its online functionalities removed. 
+            Specifically, the game (Miitopia for the Nintendo 3DS) attempts to pull charactatures called Miis from a central server that no longer exists. As a backup, the game instead parses Miis from files inside the game's filesystem. 
+            I reverse-engineered how the game stores this local data (thankfully, there was already online documentation on both Miis and some of the container files the game uses) and transplanted a curated selection of Miis from 
+            <a href="https://www.miicharacters.com/">miicharacters.com</a>. I wrote a python script to parse the QR codes that the Miis were stored in into a more standard binary format and bundle together the files in the way the game
+            expects.
+          </li>
+          <li>
+            <a href="https://github.com/The0zymandias/the-repository">The Repository (Nintendo 3DS Unistore)</a> <b>(2024)</b> - This is a unistore, hosted on GitHub and compatible with the 3DS homebrew application Universal-Updater.
+            Unistores are simply JSON files with a specific hierarchy that can be used to download and install programs and files onto a modded Nintendo 3DS game console. My unistore is capable of self-updating and has a small selection
+            of programs and mods that do not exist on the default unistore, <a href="https://db.universal-team.net/">Universal-DB</a>. This was one of my simpler projects, requiring JSON and basic git/GitHub knowledge.
+          </li>
+          <li>
             <a href="https://github.com/The0zymandias/update-discord-script">Update Discord Script</a> <b>(2024)</b> - This is a 5-line bash script that updates discord to the lastest .deb version
             on Debian-based linux distros. The distrobution of Discord for debian does not update itself for some reason and will refuse to launch if it is not the latest version, so I made this script so that I don't need to manually write out the shell commands.
             You could modify your discord .desktop file to run this script before trying to launch discord, or just run the script on a sucessful login to the computer.
@@ -171,7 +236,7 @@
           <li style="list-style-type: none; margin-top: 0px;">
             <ul>
               <li style="margin: 0px;"><a href="sorting.html">online demo</a> (For any browser with Javascript enabled)</li>
-              <li style="margin: 0px;"><a download>.exe download</a> (for 64 & 32 bit x86 computers)</li>
+              <!-- <li style="margin: 0px;"><a download>.exe download</a> (for 64 & 32 bit x86 computers)</li> -->
               <li style="margin: 0px;"><a href="file/visual-sorting-algorithms.love" download>.love download</a> (For use with a LOVE2D installation)</li>
               <li style="margin: 0px;"><a href="sorting.html" download>.html download</a> (for running in your browser)</li>
             </ul>
@@ -179,6 +244,6 @@
         </ul>
       </div>
     </main>
-    <footer><h1 style="text-align: center; margin: 0;">Teague W. Burkey @<br>https://debian-box.caracal-draco.ts.net</h1></footer>
+    <footer>Thanks to https://skillicons.dev</footer>
   </body>
 </html>
