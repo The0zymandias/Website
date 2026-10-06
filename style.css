@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('file/proxima-nova-regular-opentype-2_ufonts.com.woff2') format('woff2'),
+    url('file/proxima-nova-regular-opentype-2_ufonts.com.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg-color: #181a1b;
+    --blue-bg-color: #304a4e;
+    --blue-bg-color-2: #4c7579;
+    --dark-bg-color: #0a0b0b;
+    --text-color: #ffffff;
+    --link-color: #3391ff;
+    --content-header-boarder-color: rgb(60, 178, 214);
+}
+
+p, h1, h2, h3 {
+    color: var(--text-color);
+}
+
+html {
+    background-color: var(--dark-bg-color);
+    font-family: 'Proxima Nova', "Noto Sans";
+    font-size: 20px;
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header {
+    margin: 0;
+    vertical-align: bottom;
+}
+
+main {
+    background-color: var(--bg-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-style: inset;
+    border-bottom-style: outset;
+    border-width: 6px;
+    border-color: var(--content-header-boarder-color);
+}
+
+.content-block {
+    color: var(--text-color);
+    display: flex; 
+    flex-direction: column;
+}
+
+.content-block a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.content-block h1 {
+    text-align: center;
+    margin-inline: auto;
+    border: rgb(from rgb(60, 178, 214) r g b);
+    border-style: outset;
+    border-radius: 15px;
+    max-width: fit-content;
+    border-width: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-block p, nav {
+    text-align: center;
+    margin-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: large;
+}
+
+.content-block ul {
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: large;
+}
+
+#projects li + li {
+    margin-top: 10px;
+}
+
+#banner-img {
+    width: 100%;
+    aspect-ratio: 1400 / 350;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+}
+
+#technologies-svg {
+    height: 48px;
+    max-width: 100%;
+    display: block;
+    margin-inline: auto;
+}
+
+#about-me {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#profile-vertical {
+    max-width: 35%;
+    border: rgb(from rgb(60, 178, 214) r g b);
+}
