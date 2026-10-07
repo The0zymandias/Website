@@ -1,64 +1,72 @@
-<head>
-    <meta charset="utf-8">
-    <title>Projects @ Teague's Debian Box</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" type="image" href="img/banner.jpg">
-</head>
-<body>
-    <header>
-        <img id="banner-img" src="img/banner.jpg" alt="A blue mountain image banner">
-    </header>
-    <main><div class="content-block">
-        <h1>Projects</h1>
-        <p style="margin: 0px; text-align: center; margin-inline: auto;">
-          <b>&lt; All projects  are concieved of and created WITHOUT the use of generative AI &gt;<br>&lt; for the purpose of cultivating my own skillset and problem-solving skills &gt;</b>
-        </p>
-        <ul id="projects">
-          <li>
-            <a href="https://docs.google.com/document/d/1YlbLwMbO6HxWiAs9xtckcCSOut4ei5R7-JeR9m8410w/edit?usp=sharing">The Saint Jimmy Formula Sheet</a> <b>(2026 - present)</b> -
-            This was put together by me throughout college and is designed to be a comprehensive reference of math formulas that are relevant in high school and college level mathmatics.
-          </li>
-          <li>
-            <a href="https://github.com/cscosu/bootcamp-honeymonkey/tree/master">OSU Cybersecurity Club Honeymonkey</a> <b>(2026)</b> - I wrote the skeleton for one of OSU Cyber Security Club's backend utilities.
-            It is written in Python 3.14 and makes use of various technologies, including the JSON specification, python pip, SHA-256 hashing, and the Selenium WebDriver (used for exploring and 
-            interacting with websites). This honeymonkey runs through the CTF (capture the flag) website to complete cyber security challenges, check hashes 
-            of files to make sure they aren't corrupted, and report when any of that fails.
-          </li>
-          <li>
-            <a href="https://github.com/The0zymandias/miitopia-3ds-background-mii-replacements">3DS Miitopia Background Mii Replacements</a> <b>(2025)</b> - An old game that I enjoy playing had its online functionalities removed. 
-            Specifically, the game (Miitopia for the Nintendo 3DS) attempts to pull charactatures called Miis from a central server that no longer exists. As a backup, the game instead parses Miis from files inside the game's filesystem. 
-            I reverse-engineered how the game stores this local data (thankfully, there was already online documentation on both Miis and some of the container files the game uses) and transplanted a curated selection of Miis from 
-            <a href="https://www.miicharacters.com/">miicharacters.com</a>. I wrote a python script to parse the QR codes that the Miis were stored in into a more standard binary format and bundle together the files in the way the game
-            expects.
-          </li>
-          <li>
-            <a href="https://github.com/The0zymandias/the-repository">The Repository (Nintendo 3DS Unistore)</a> <b>(2024)</b> - This is a unistore, hosted on GitHub and compatible with the 3DS homebrew application Universal-Updater.
-            Unistores are simply JSON files with a specific hierarchy that can be used to download and install programs and files onto a modded Nintendo 3DS game console. My unistore is capable of self-updating and has a small selection
-            of programs and mods that do not exist on the default unistore, <a href="https://db.universal-team.net/">Universal-DB</a>. This was one of my simpler projects, requiring JSON and basic git/GitHub knowledge.
-          </li>
-          <li>
-            <a href="https://github.com/The0zymandias/update-discord-script">Update Discord Script</a> <b>(2024)</b> - This is a 5-line bash script that updates discord to the lastest .deb version
-            on Debian-based linux distros. The distrobution of Discord for debian does not update itself for some reason and will refuse to launch if it is not the latest version, so I made this script so that I don't need to manually write out the shell commands.
-            You could modify your discord .desktop file to run this script before trying to launch discord, or just run the script on a sucessful login to the computer.
-          </li>
-          <li>
-            <a href="https://github.com/The0zymandias/Miitopia_Randomizer">Miitopia Randomizer</a> <b>(2023, revised 2025)</b> - This is my fork of the Miitopia randomizer project. 
-            It heavily utilizes Python 3 and required parsing .sarc files, rudamentary spreadsheet files, and a bit of reverse-engineering. Miitopia is a simple RPG game where you
-            fight enemies, recruit teammates, and defeat a big bad guy. My fork expands on the original randomizer's capabilities by randomizing Inn rooms, preventing some weird crashes on the 3DS
-            port of the game, rebalancing a few enemies, limiting music randomization, and cleaning up the pre-existing code.
-          </li>
-          <li><a href="https://github.com/The0zymandias/Visual-Sorting-Algorithms">Visual Sorting Algorithms</a> <b>(2023)</b> - 
-            A visually pleasing display of how various sorting algorithms function. Utilizes the LOVE2D game engine and Lua.</li>
-          <li style="list-style-type: none; margin-top: 0px;">
-            <ul>
-              <li style="margin: 0px;"><a href="sorting.html">online demo</a> (For any browser with Javascript enabled)</li>
-              <!-- <li style="margin: 0px;"><a download>.exe download</a> (for 64 & 32 bit x86 computers)</li> -->
-              <li style="margin: 0px;"><a href="file/visual-sorting-algorithms.love" download>.love download</a> (For use with a LOVE2D installation)</li>
-              <li style="margin: 0px;"><a href="sorting.html" download>.html download</a> (for running in your browser)</li>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Projects @ Teague's Debian Box</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preload" as="image" href="img/banner.jpg">
+    </head>
+    <body>
+        <header>
+            <img id="banner-img" src="img/banner.jpg" alt="A blue mountain image banner">
+        </header>
+        <main><div class="content-block">
+            <h1>Projects</h1>
+            <p style="margin: 0px; text-align: center; margin-inline: auto;">
+            <b>&lt; All projects  are concieved of and created WITHOUT the use of generative AI &gt;<br>&lt; for the purpose of cultivating my own skillset and problem-solving skills &gt;</b>
+            </p>
+            <ul id="projects">
+            <li>
+                <a href="https://teaguewburkey.hopto.org">My Portfolio Website</a> <b>(2026 - present)</b> -
+                This is the website you are viewing right now. I've built it up over the course of a few months, adding and removing things as I cultivate my knowledge of web development. It is currently hosted on GitHub pages,
+                but I use <a href="noip.com">No IP.com</a> for a free dynamic DNS record to make the url more pretty.
+            </li>
+            <li>
+                <a href="https://docs.google.com/document/d/1YlbLwMbO6HxWiAs9xtckcCSOut4ei5R7-JeR9m8410w/edit?usp=sharing">The Saint Jimmy Formula Sheet</a> <b>(2026 - present)</b> -
+                This is being put together by me throughout college and is designed to be a composition of math formulas that are relevant in high school and college level mathmatics.
+            </li>
+            <li>
+                <a href="https://github.com/cscosu/bootcamp-honeymonkey/tree/master">OSU Cybersecurity Club Honeymonkey</a> <b>(2026)</b> - I wrote the skeleton for one of OSU Cyber Security Club's backend utilities.
+                It is written in Python 3.14 and makes use of various technologies, including the JSON specification, python pip, SHA-256 hashing, and the Selenium WebDriver (used for exploring and 
+                interacting with websites). This honeymonkey runs through the CTF (capture the flag) website to complete cyber security challenges, check hashes 
+                of files to make sure they aren't corrupted, and report when any of that fails.
+            </li>
+            <li>
+                <a href="https://github.com/The0zymandias/miitopia-3ds-background-mii-replacements">3DS Miitopia Background Mii Replacements</a> <b>(2025)</b> - An old game that I enjoy playing had its online functionalities removed. 
+                Specifically, the game (Miitopia for the Nintendo 3DS) attempts to pull charactatures called Miis from a central server that no longer exists. As a backup, the game instead parses Miis from files inside the game's filesystem. 
+                I reverse-engineered how the game stores this local data (thankfully, there was already online documentation on both Miis and some of the container files the game uses) and transplanted a curated selection of Miis from 
+                <a href="https://www.miicharacters.com/">miicharacters.com</a>. I wrote a python script to parse the QR codes that the Miis were stored in into a more standard binary format and bundle together the files in the way the game
+                expects.
+            </li>
+            <li>
+                <a href="https://github.com/The0zymandias/the-repository">The Repository (Nintendo 3DS Unistore)</a> <b>(2024)</b> - This is a unistore, hosted on GitHub and compatible with the 3DS homebrew application Universal-Updater.
+                Unistores are simply JSON files with a specific hierarchy that can be used to download and install programs and files onto a modded Nintendo 3DS game console. My unistore is capable of self-updating and has a small selection
+                of programs and mods that do not exist on the default unistore, <a href="https://db.universal-team.net/">Universal-DB</a>. This was one of my simpler projects, requiring JSON and basic git/GitHub knowledge.
+            </li>
+            <li>
+                <a href="https://github.com/The0zymandias/update-discord-script">Update Discord Script</a> <b>(2024)</b> - This is a 5-line bash script that updates discord to the lastest .deb version
+                on Debian-based linux distros. The distrobution of Discord for debian does not update itself for some reason and will refuse to launch if it is not the latest version, so I made this script so that I don't need to manually write out the shell commands.
+                You could modify your discord .desktop file to run this script before trying to launch discord, or just run the script on a sucessful login to the computer.
+            </li>
+            <li>
+                <a href="https://github.com/The0zymandias/Miitopia_Randomizer">Miitopia Randomizer</a> <b>(2023, revised 2025)</b> - This is my fork of the Miitopia randomizer project. 
+                It heavily utilizes Python 3 and required parsing .sarc files, rudamentary spreadsheet files, and a bit of reverse-engineering. Miitopia is a simple RPG game where you
+                fight enemies, recruit teammates, and defeat a big bad guy. My fork expands on the original randomizer's capabilities by randomizing Inn rooms, preventing some weird crashes on the 3DS
+                port of the game, rebalancing a few enemies, limiting music randomization, and cleaning up the pre-existing code.
+            </li>
+            <li><a href="https://github.com/The0zymandias/Visual-Sorting-Algorithms">Visual Sorting Algorithms</a> <b>(2023)</b> - 
+                A visually pleasing display of how various sorting algorithms function. Utilizes the LOVE2D game engine and Lua.</li>
+            <li style="list-style-type: none; margin-top: 0px;">
+                <ul>
+                <li style="margin: 0px;"><a href="sorting.html">online demo</a> (For any browser with Javascript enabled)</li>
+                <!-- <li style="margin: 0px;"><a download>.exe download</a> (for 64 & 32 bit x86 computers)</li> -->
+                <li style="margin: 0px;"><a href="file/visual-sorting-algorithms.love" download>.love download</a> (For use with a LOVE2D installation)</li>
+                <li style="margin: 0px;"><a href="sorting.html" download>.html download</a> (for running in your browser)</li>
+                </ul>
+            </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-    </main>
-    <footer></footer>
-</body>
+        </div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
