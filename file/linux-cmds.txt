@@ -1,0 +1,6 @@
+doas apk add $(wget -q -O - https://twburkey.dev/file/alpine-postinstall-packages.txt)
+alias hist="history | less"
+echo $SHELL
+echo $USER
+su -
+usermod -aG GROUP USER
