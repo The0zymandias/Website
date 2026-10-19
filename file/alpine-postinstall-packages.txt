@@ -1,0 +1,1 @@
+nano curl fastfetch iproute2
