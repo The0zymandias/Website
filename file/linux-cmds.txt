@@ -1,5 +1,10 @@
 doas apk add $(wget -q -O - https://twburkey.dev/file/alpine-postinstall-packages.txt)
+head -c 24 /dev/urandom | base64
+dd if=SOURCE bs=4M status=progress | gzip -c -9 > /OUT
+sudo usermod -aG docker $USER
+
 alias hist="history | less"
+
 echo $SHELL
 echo $USER
 su -

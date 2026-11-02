@@ -24,4 +24,3 @@ with open (os.path.join(dirPath, "index.html"), "w") as index:
         </body>
 </html>
 """)
-    
