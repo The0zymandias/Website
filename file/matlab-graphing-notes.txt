@@ -1,0 +1,11 @@
+% this is for having multiple plots on the same tab/figure/next to each other
+layoutName = tiledLayout(numOfColumns, numofRows)
+
+% just run this to go to the next part of the grid in sequence
+nexttile
+
+% for having multiple data lines on the same plot
+hold on / hold off
+
+% Setting a name to the overall tiled layout
+title(layoutName, titleString, "FontSize", 16)

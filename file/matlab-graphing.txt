@@ -1,6 +1,0 @@
-layoutName = tiledLayout(col, row)
-nexttile
-
-hold on / hold off
-
-title(layoutName, titleString, "FontSize", 16)
