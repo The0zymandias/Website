@@ -9,3 +9,6 @@ hold on / hold off
 
 % Setting a name to the overall tiled layout
 title(layoutName, titleString, "FontSize", 16)
+
+% Very unusual function
+legend("one string to name each line", "Location", "NorthWest")
