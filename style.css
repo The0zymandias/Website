@@ -35,8 +35,8 @@ html {
 body {
     max-width: 1000px;
     margin-inline: auto;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 header {
