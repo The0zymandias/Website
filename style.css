@@ -27,7 +27,7 @@ html {
     background-color: var(--dark-bg-color);
     font-family: 'Proxima Nova', "Noto Sans";
     font-size: 20px;
-    background-image: url("img/bg.png");
+    background-image: url("/img/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
